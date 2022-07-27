@@ -1,0 +1,32 @@
+﻿nomeCerto = False
+while (nomeCerto == False):
+    try:
+        print("Digite seu nome completo: ")
+        nomeC = input()
+        if(nomeC != ""):
+            nomeCerto = True
+
+            print("Olá!",nomeC)
+            continue
+        else:
+            print("Nome obrigatório!")
+    except:
+        print("Nome desconhecido")
+        
+anoCerto = False
+while (anoCerto == False):
+    try:
+        print("Digite seu ano de nascimento: ")
+        print("Obs: Só é permitido entre 1922 a 2022. ")
+        ano = int(input())
+        if(ano >= 1922) and (ano <= 2022):
+            anoCerto = True
+            resultado = 2022 - ano
+            print(nomeC,"sua idade é: ",resultado,"ano(os)" )
+            break
+        else:
+            print("Data inferior ou superior ao solicitado!")
+    except:
+        print("Caractere invalido")
+else:
+    print("Nome obrigatório!")
